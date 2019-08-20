@@ -1,0 +1,249 @@
+#SetEnvIf User-Agent ^Amazon Cloudfront$ cdn
+#SetEnvIf Host ^drlx1pkflrq07.cloudfront.net$ cdn
+
+#AuthType Basic
+#AuthName "xxx.com"
+#AuthUserFile /home/ubuntu/workspace/public/.htpasswd
+#require valid-user
+
+#Order Deny,Allow
+#Deny from all
+#Allow from env=cdn
+#Satisfy Any
+
+RewriteEngine On
+# The following rule tells Apache that if the requested filename
+# exists, simply serve it.
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+# The following rewrites all other queries to index.php. The 
+# condition ensures that if you are using Apache aliases to do
+# mass virtual hosting, the base path will be prepended to 
+# allow proper resolution of the index.php file; it will work
+# in non-aliased environments as well, providing a safe, one-size 
+# fits all solution.
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)(.+)::\2$
+RewriteRule ^(.*) - [E=BASE:%1]
+RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTPHOST}%{REQUESTURI}
+
+<ifModule mod_gzip.c>
+    mod_gzip_on Yes
+    mod_gzip_dechunk Yes
+    mod_gzip_item_include file .(html?phtml||txt|css|js|php|pl)$
+    mod_gzip_item_include handler ^cgi-script$
+    mod_gzip_item_include mime ^text/.*
+    mod_gzip_item_include mime ^application/x-javascript.*
+    mod_gzip_item_exclude mime ^image/.*
+    mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\\.(ico|jpe?g|png|gif|swf|css|js)$">
+        Header set Cache-Control "max-age=31636000, public"
+    </FilesMatch>
+    <FilesMatch "\\.(x?html?phtml?|php)$">
+        Header set Cache-Control "max-age=600, private, must-revalidate"
+    </FilesMatch>
+    Header unset ETag
+    Header unset Last-Modified
+</IfModule>
+
+<IfModule mod_headers.c>
+    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
+    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
+    RewriteRule "^(.*)\.css" "$1\.css\.gz" [QSA]
+    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
+    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
+    RewriteRule "^(.*)\.js" "$1\.js\.gz" [QSA]
+    RewriteRule "\.css\.gz$" "-" [T=text/css,E=no-gzip:1]
+    RewriteRule "\.js\.gz$" "-" [T=text/javascript,E=no-gzip:1]
+    
+    
+    <FilesMatch "(\.js\.gz|\.css\.gz\.svg\.xml\.swf\.jpg\.jpeg\.png\.gif\.js\.css)$">
+        Header append Content-Encoding gzip
+        Header append Vary Accept-Encoding
+        Header set Cache-Control "max-age=86400, public"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+    ExpiresByType text/css                              "access plus 1 year"
+
+
+  # Data interchange
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+
+  # Favicon (cannot be renamed!) and cursor images
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+
+  # JavaScript
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+
+  # Manifest files
+    ExpiresByType application/manifest+json             "access plus 1 week"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+
+  # Media files
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+
+  # Web fonts
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+
+    # OpenType
+    ExpiresByType font/opentype                         "access plus 1 month"
+
+    # TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 month"
+    ExpiresByType application/x-font-woff2              "access plus 1 month"
+    ExpiresByType application/woff2                     "access plus 1 month"
+
+  # Other
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+    <FilesMatch "\.(bmp|css|flv|gif|ico|jpg|jpeg|js|pdf|png|svg|swf|tif|tiff|vue)$">
+        Header set Last-Modified "Mon, 31 Aug 2009 00:00:00 GMT"
+    </FilesMatch>
+</IfModule>
+<IfModule !mod_version.c>
+  LoadModule version_module /usr/lib/apache2/modules/mod_version.so
+</IfModule>
+
+<IfModule pagespeed_module>
+    # Turn on mod_pagespeed. To completely disable mod_pagespeed, you
+    # can set this to "off".
+    ModPagespeed on
+    
+    ModPagespeedDomain https://api.tixget.com
+    ModPagespeedDomain https://files.tixget.com
+    ModPagespeedDomain https://www.tixget.com
+    ModPagespeedDomain *.tixget.com
+    ModPagespeedRewriteLevel CoreFilters
+    ModPagespeedEnableFilters defer_javascript
+    ModPagespeedEnableFilters convert_png_to_jpeg,convert_jpeg_to_webp
+    ModPagespeedEnableFilters canonicalize_javascript_libraries
+    ModPagespeedEnableFilters inline_import_to_link 
+    ModPagespeedEnableFilters flatten_css_imports 
+    ModPagespeedEnableFilters combine_css 
+    ModPagespeedEnableFilters rewrite_css 
+    ModPagespeedEnableFilters prioritize_critical_css 
+    ModPagespeedEnableFilters combine_javascript 
+    ModPagespeedEnableFilters rewrite_javascript 
+    ModPagespeedEnableFilters collapse_whitespace 
+    ModPagespeedEnableFilters rewrite_images
+    ModPagespeedEnableFilters move_css_to_head 
+    ModPagespeedEnableFilters move_css_above_scripts 
+    ModPagespeedEnableFilters rewrite_css,sprite_images 
+    ModPagespeedEnableFilters sprite_images
+    ModPagespeedEnableFilters lazyload_images
+    ModPagespeedEnableFilters inline_preview_images
+    ModPagespeedEnableFilters combine_heads
+    ModPagespeedEnableFilters add_head
+    ModPagespeedEnableFilters convert_jpeg_to_progressive
+    ModPagespeedEnableFilters convert_meta_tags
+    ModPagespeedEnableFilters extend_cache
+    ModPagespeedEnableFilters inline_css
+    ModPagespeedEnableFilters dedup_inlined_images
+    ModPagespeedEnableFilters inline_javascript
+    ModPagespeedEnableFilters rewrite_style_attributes_with_url
+    ModPagespeedEnableFilters collapse_whitespace,remove_comments
+    ModPagespeedEnableFilters pedantic,remove_comments
+    ModPagespeedEnableFilters elide_attributes
+    ModPagespeedEnableFilters add_instrumentation
+    ModPagespeedEnableFilters insert_ga
+    ModPagespeedAnalyticsID GTM-TG2T7N3
+    ModPagespeedEnableFilters insert_dns_prefetch
+    ModPagespeedEnableFilters inline_google_font_css
+    ModPagespeedEnableFilters hint_preload_subresources
+    ModPagespeedEnableFilters extend_cache_pdfs
+    ModPagespeedEnableFilters rewrite_style_attributes,rewrite_css
+    ModPagespeedEnableFilters trim_urls
+    ModPagespeedEnableFilters local_storage_cache
+    ModPagespeedEnableFilters make_show_ads_async
+    ModPagespeedEnableFilters make_google_analytics_async
+    ModPagespeedEnableFilters outline_css
+    ModPagespeedEnableFilters outline_javascript
+    ModPagespeedRewriteLevel OptimizeForBandwidth
+    ModPagespeedEnableFilters remove_comments
+    ModPagespeedEnableFilters remove_quotes
+</IfModule>
+<files *.phtml>
+    SetOutputFilter DEFLATE
+</files>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/phtml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/opentype
+
+# For Olders Browsers Which Can't Handle Compression
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4 gzip-only-text/phtml
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/phtml
+</IfModule>

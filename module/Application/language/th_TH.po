@@ -1,0 +1,8 @@
+msgid "title"
+msgstr "TH ZF3"
+
+msgid "hello"
+msgstr "สวัสดี"
+
+msgid "learn more"
+msgstr "ดูต่อ"

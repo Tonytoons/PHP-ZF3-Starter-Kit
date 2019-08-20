@@ -1,0 +1,13 @@
+# robots.txt for https://api.tixget.com/
+User-agent: *
+Disallow: /public/
+Disallow: /vendor/
+Disallow: /deploy/
+Disallow: /module/
+Disallow: /data/
+Disallow: /config/
+Sitemap: https://www.zf3.com/sitemap.xml
+
+# Allow crawling of all content
+User-agent: *
+Disallow: /

@@ -1,0 +1,8 @@
+msgid "title"
+msgstr "ZF3 - Starter - Kit"
+
+msgid "hello"
+msgstr "Hello"
+
+msgid "learn more"
+msgstr "Learn more"

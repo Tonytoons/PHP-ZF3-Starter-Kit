@@ -1,0 +1,497 @@
+msgid "Site name"
+msgstr "Zenovly" 
+ 
+msgid "Site Title" 
+msgstr "Your renovation made easy"
+ 
+msgid "Home"
+msgstr "Acceuil"
+
+msgid "Recents"
+msgstr "Recents"
+
+msgid "Contact Us"
+msgstr "Contactez-nous"
+
+msgid "Profile"
+msgstr "Profile"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Log Out"
+msgstr "Log Out"
+  
+msgid "Register"
+msgstr "Register"
+ 
+msgid "Login Title"
+msgstr "Login With this great website"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Remember Me"
+msgstr "Remember Me"
+
+msgid "OR"
+msgstr "OR"
+
+msgid "Login With Facebook"
+msgstr "Login With Facebook"
+
+msgid "Register Title" 
+msgstr "Register With Site"
+  
+msgid "Full name"
+msgstr "Name (Full name)"
+
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "New Password "
+msgstr "New Password "
+
+msgid "General Profile"
+msgstr "General Profile"
+
+msgid "Email Address"
+msgstr "Email Address"
+
+msgid "Date Of Birth"
+msgstr "Date Of Birth"
+
+msgid "Gender"
+msgstr "Gender"
+
+msgid "Phone number"
+msgstr "Phone number"
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Male"
+msgstr "Male"
+
+msgid "Female"
+msgstr "Female"
+
+msgid "Other"
+msgstr "Other"
+
+msgid "Save"
+msgstr "Save"
+ 
+msgid "Old Password"
+msgstr "Old Password"
+
+msgid "Change password"
+msgstr "Change password"
+
+msgid "New Photo" 
+msgstr "New Photo"
+
+msgid "Upload Photo"
+msgstr "Upload Photo"  
+
+msgid "Cancal"
+msgstr "Cancal"
+
+msgid "Step 1 : Do you have a renovation project ?"
+msgstr "Etape 1 : Avez-vous déjà selectionné un artisan ?"
+
+msgid "I do have a renovation project"
+msgstr "Oui, j'ai sélectionné un artisan"
+
+msgid "I do not have a renovation project"
+msgstr "Non, je n'ai pas encore sélectionné mon artisan"
+
+msgid "Save and continue"
+msgstr "Prochaine étape"
+
+msgid "Step 2 : Do you have a signed contract already ?"
+msgstr "Etape 2 : Avez-vous un devis ou une facture signé ?"
+
+msgid "I have have a signed contract already"
+msgstr "Oui, j'ai déjà signé un contrat"
+
+msgid "I don’t have a signed contract yet"
+msgstr "Non, je n'ai pas encore de contrat"
+
+msgid "Previous"
+msgstr "Pr2cédent"
+
+msgid "Step 3 : Give us more details about the contract."
+msgstr "Etape 3: Donnez-nous plus de détails sur le contrat"
+
+msgid "1. Upload a picture of the contract (can be an image file or a PDF file)"
+msgstr "1. Ajoutez une copie de votre contrat"
+
+msgid "2. Tell us what is the total price (tax included)"
+msgstr "2. Quel est le prix total de ce contrat "
+
+msgid "3. Give us the start date of the renovation work"
+msgstr "3. Quand est prévu le début des travaux ?"
+
+msgid "4. Give us the end date of the renovation work"
+msgstr "4. Quand est prévu la fin des travaux ?"
+
+msgid "Information about the supplier"
+msgstr "Donnez nous plus d'information sur l'artisan qui va effectuer vos travaux"
+
+msgid "First & Last Name"
+msgstr "Nom et prénom de l'artisan"
+
+msgid "Company Name"
+msgstr "Nom de la société"
+
+msgid "Company Address"
+msgstr "Adresse de la société"
+
+msgid "Mobile Phone Number"
+msgstr "Numéro de téléphone mobile"
+
+msgid "Landline Phone Number"
+msgstr "Numéro de téléphone fixe"
+
+msgid "Sireal Number"
+msgstr "Le SIREN de votre artisan"
+
+msgid "Stap 4 : This is your contract."
+msgstr "Etape 4 : Signé et accepté le contrat electroniquement"
+
+msgid "I have read and understand the Privacy Policy."
+msgstr "J'accepte les termes et conditions"
+
+msgid "Accept"
+msgstr "Accepter"
+
+msgid "Stap 5 : Complete"
+msgstr "Etape 5 : Terminé! "
+
+msgid "You have successfully completed."
+msgstr "Nous allons maintenant solliciter l'artisan afin qu'il accepte le contrat à son tour"
+
+msgid "Success!"
+msgstr "Bravo! !"
+
+#: home page
+
+msgid "Stay Zen during your renovation"
+msgstr "L'assurance de vos travaux accomplis"
+
+msgid "Subscribe"
+msgstr "Subscribe"
+
+msgid "Subscribe Now"
+msgstr "Subscribe Now"
+
+msgid "Our partners"
+msgstr "Our partners"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "Email Us"
+msgstr "Email Us"
+
+msgid "Your Name"
+msgstr "Your Name"
+
+msgid "Your Email"
+msgstr "Your Email"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Send"
+msgstr "Send"
+
+msgid "Visit Us"
+msgstr "Visit Us" 
+
+msgid "Company address contact"
+msgstr "xxxx 9, xxx, xxxxx"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Email"
+msgstr "Email"
+ 
+msgid "© Zenovly - All rights reserved"
+msgstr "© Zenovly - All rights reserved"
+
+#: login
+
+msgid "Login via"
+msgstr "Login via"
+ 
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "or"  
+msgstr "or"
+
+msgid "Forget the password ?"
+msgstr "Forget the password ?"
+
+msgid "Sign in"
+msgstr "Sign in"
+
+msgid "New here ?"
+msgstr "New here ?" 
+
+msgid "Join Us"
+msgstr "Join Us"
+
+#: form supplier page  
+
+msgid "Price (tax included)"
+msgstr "Price (tax included)"
+
+msgid "Start date"
+msgstr "Start date"  
+
+msgid "End date"
+msgstr "End date"  
+
+#: home page 
+
+msgid "Features Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.."
+msgstr "Features Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.."
+
+msgid "Vos travaux sans soucis 1"
+msgstr "Vos travaux sans soucis"
+
+msgid "Vos travaux sans soucis 2"
+msgstr "Vos travaux sans soucis"
+
+msgid "Vos travaux sans soucis 3"
+msgstr "Vos travaux sans soucis"
+
+msgid "Vos travaux sans soucis 4"
+msgstr "Vos travaux sans soucis"
+
+msgid "Vos 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+
+msgid "Vos 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+
+msgid "Vos 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+
+msgid "Vos 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+
+msgid "Subscribe Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+msgstr "Subscribe Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+
+msgid "Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.."
+msgstr "Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.." 
+
+msgid "Our partners Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+msgstr "Our partners Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper."
+
+msgid "Contact Us Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.."
+msgstr "Contact Us Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.."
+
+#: text file js lang   
+
+msgid "Oops! Something went wrong." 
+msgstr "Oops! Something went wrong."
+
+msgid "Please confirm the privacy policy."
+msgstr "Please confirm the privacy policy."
+
+msgid "Sireal number must contain only letters, numbers, or dashes."
+msgstr "Sireal number must contain only letters, numbers, or dashes."
+
+msgid "Please enter a valid phone number"
+msgstr "Please enter a valid phone number"
+
+msgid "Please enter full name"
+msgstr "Please enter full name"
+
+msgid "Please enter a value with a valid mimetype (pdf,jpg,jpeg,png,gif)."
+msgstr "Please enter a value with a valid mimetype (pdf,jpg,jpeg,png,gif)."
+
+msgid "Please enter price."
+msgstr "Please enter price."
+
+msgid "Please enter company name."
+msgstr "Please enter company name."
+
+msgid "Please enter work start date."
+msgstr "Please enter work start date."
+
+msgid "Please enter work end date."
+msgstr "Please enter work end date."
+
+msgid "Work start date and end date should be proper."
+msgstr "Work start date and end date should be proper."
+
+msgid "You must enter a sireal number"
+msgstr "You must enter a sireal number"
+
+msgid "sireal number format not valid"
+msgstr "Sireal number format not valid"
+
+msgid "We need your email address to contact you."
+msgstr "We need your email address to contact you."
+
+msgid "Your email address must be in the format of name@domain.com"
+msgstr "Your email address must be in the format of name@domain.com"
+
+msgid "Press ok to logout!"
+msgstr "Press ok to logout!"
+
+msgid "Please enter a valid email address."
+msgstr "Please enter a valid email address."
+
+msgid "Your password must be at least 5 characters long."
+msgstr "Your password must be at least 5 characters long."
+
+msgid "Please login first !."
+msgstr "Please login first !."
+
+msgid "Password does not match the confirm password"
+msgstr "Password does not match the confirm password"
+
+msgid "You have been successfully registered. please you login."
+msgstr "You have been successfully registered. please you login."
+
+msgid "Edit profile successfuly"
+msgstr "Edit profile successfuly"
+
+msgid "Your new password must be at least 5 characters long."
+msgstr "Your new password must be at least 5 characters long."
+
+msgid "New password successfuly"
+msgstr "New password successfuly"  
+
+#: 21-04-2017
+
+msgid "Upload profile photo successfully"
+msgstr "Upload profile photo successfully"
+ 
+msgid "I agree to the Terms of Service."
+msgstr "I agree to the Terms of Service."
+
+msgid "Confirm contract successfully."
+msgstr "Confirm contract successfully."
+
+msgid "Comfirm"
+msgstr "Comfirm"
+
+msgid "Contract info"
+msgstr "Contract info"
+
+msgid "Contract file"
+msgstr "Contract file"
+
+msgid "Download File"
+msgstr "Download File"
+
+msgid "Total price (tax included)"
+msgstr "Total price (tax included)"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Pending"
+msgstr "Pending"
+
+msgid "Accepted"
+msgstr "Accepted"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Done"
+msgstr "Done" 
+
+msgid "You do not have permission to view contract details."
+msgstr "You do not have permission to view contract details."
+
+#: 22-04-2017    
+
+msgid "Please enter subject."
+msgstr "Please enter subject."
+
+msgid "Please enter message." 
+msgstr "Please enter message."
+ 
+msgid "Your message has been sent. Thank you!"
+msgstr "Your message has been sent. Thank you!"
+
+#: 25-05-2017
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Hot"
+msgstr "Hot"
+
+msgid "View"
+msgstr "View"
+
+msgid "Views"
+msgstr "Views"
+
+msgid "Read more"
+msgstr "Read more"
+
+msgid "Fan Page"
+msgstr "Fan Page"
+
+msgid "Tell your friends"
+msgstr "Tell your friends"
+
+
+#: 26-04-2017 
+
+msgid "Company Email"  
+msgstr "Company Email"  
+
+msgid "Connected Facebook"
+msgstr "Connected Facebook" 
+
+msgid "Connect With Facebook"
+msgstr "Connect With Facebook"
+
+msgid "Connect Facebook Successfuly."
+msgstr "Connect Facebook Successfuly." 
+
+
+#: 27-04-2017
+
+msgid "Supplier Contract"  
+msgstr "Supplier Contract"
+
+msgid "View"  
+msgstr "View"
+
+msgid "Consumer Contract"  
+msgstr "Consumer Contract"
+
+msgid "Not Supplier Contract !"  
+msgstr "Not Supplier Contract !"
+
+msgid "Not Consumer Contract !"  
+msgstr "Not Consumer Contract !"
+
+#: 04-05-2017
+
+msgid "A trusted 3rd party for your renovation projects"
+msgstr "Votre tiers de confiance pour vos rénovations"
+ 
+msgid "xxxx"  
+msgstr "xxxx"
